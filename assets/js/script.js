@@ -306,15 +306,9 @@ var saveTasks = function () {
 
 var loadTasks = function () {
     // Get task items from local storage.
-<<<<<<< HEAD
-    savedTasks = localStorage.getItem("tasks");
-
-    if (!saveTasks) {
-=======
     var savedTasks = localStorage.getItem("tasks");
 
     if (!savedTasks) {
->>>>>>> enhancement/task-type-freeform
         return false;
     }
 
@@ -322,13 +316,8 @@ var loadTasks = function () {
     savedTasks = JSON.parse(savedTasks);
 
     // loop through savedTasks array
-<<<<<<< HEAD
-    for (let i = 0; i < savedTasks.length; i++) {
-        // pass each task object into the 'createTaskEl()' function
-=======
     for (var i = 0; i < savedTasks.length; i++) {
         // pass each task object into the `createTaskEl()` function
->>>>>>> enhancement/task-type-freeform
         createTaskEl(savedTasks[i]);
     }
 
